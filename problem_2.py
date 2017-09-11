@@ -8,12 +8,23 @@ def problem_2():
 #four million, find the sum of the even-valued terms.
 
 
+n = 2
+i = 1
+total = 0
 
+#build Fibonacci
 while i < 4000000:
 
-    #build Fibonacci
-
+    # test for even values
     if i % 2 == 0:
-        #add to sum
-        n = n+i
+        #aggregate
+        total = total + i
+
+    i = i + n
+
+
     next
+
+print total
+
+problem_2()
