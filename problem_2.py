@@ -7,24 +7,21 @@ def problem_2():
 #By considering the terms in the Fibonacci sequence whose values do not exceed
 #four million, find the sum of the even-valued terms.
 
-
-n = 2
-i = 1
-total = 0
-
-#build Fibonacci
-while i < 4000000:
-
-    # test for even values
-    if i % 2 == 0:
+# 1. establish fibonacci algorithm
+# 2. run through addition
+    i = 1
+    n = 1
+    total = 0
+    #build Fibonacci
+    while i <= 4000000:
+        # test for even values and total
+        if i % 2 == 0:
         #aggregate
-        total = total + i
-
-    i = i + n
-
-
-    next
-
-print total
-
+            total = total + i
+    # Fibonacci incrementation
+        i,n = n, i+n
+        # (1,1) = (1,1+1)
+        # (1,2) = (2,2+1)
+        # (2,3) = (3,3+2)
+    print total
 problem_2()
